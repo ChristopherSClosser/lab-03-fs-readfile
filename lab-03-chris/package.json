@@ -1,0 +1,30 @@
+{
+  "name": "lab-03-fs-readfile",
+  "version": "1.0.0",
+  "description": "file-system",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherSClosser/lab-01-modular-patterns.git"
+  },
+  "keywords": [
+    "greet",
+    "test",
+    "mocha"
+  ],
+  "author": "Chris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristopherSClosser/lab-01-modular-patterns/issues"
+  },
+  "homepage": "https://github.com/ChristopherSClosser/lab-01-modular-patterns#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
