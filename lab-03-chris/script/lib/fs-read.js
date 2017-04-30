@@ -1,28 +1,38 @@
 'use strict';
 
 const fs = require('fs');
+const paths = [
+  './third.txt',
+  './second.txt',
+  './first.txt',
+];
+
 module.exports = exports = {};
 
-exports.readFirst = function(){
-  fs.readFile('./first.txt', function(err, data){
-    if(err) throw err;
-    let newDataFirst = data.toString('hex', 0, 8);
-    console.log('This is data from the first file', newDataFirst);
-  });
-};
+exports.start = function(){
+  exports.dataArray = [];
 
-exports.readSecond = function(){
-  fs.readFile('./second.txt', function(err, data){
+  // read first file
+  fs.readFile(paths[2], function(err, data){
     if(err) throw err;
-    let newDataSecond = data.toString('hex', 0, 8);
-    console.log('This is data from the second file', newDataSecond);
-  });
-};
+    exports.dataArray.push(data.toString('hex', 0, 8));
+    console.log('This is data from the first file\n', exports.dataArray[0]);
 
-exports.readThird = function(){
-  fs.readFile('./third.txt', function(err, data){
-    if(err) throw err;
-    let newDataThird = data.toString('hex', 0, 8);
-    console.log('This is data from the third file', newDataThird);
+    // read second file
+    fs.readFile(paths[1], function(err, data){
+      if(err) throw err;
+      exports.dataArray.push(data.toString('hex', 0, 8));
+      console.log('This is data from the second file:\n', exports.dataArray[1]);
+
+      // read third file
+      fs.readFile(paths[0], function(err, data){
+        if(err) throw err;
+        exports.dataArray.push(data.toString('hex', 0, 8));
+
+        console.log('This is data from the third file:\n', exports.dataArray[2]);
+        console.log(exports.dataArray);
+        // return exports.dataArray; RETURNS only undefined to the export
+      });
+    });
   });
 };

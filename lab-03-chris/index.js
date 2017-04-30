@@ -1,7 +1,5 @@
 'use strict';
 
-const fsJs = require('./script/lib/fs-read.js');
+const fsJs = require('./script/lib/fs-read');
 
-fsJs.readFirst();
-fsJs.readSecond();
-fsJs.readThird();
+fsJs.start();
