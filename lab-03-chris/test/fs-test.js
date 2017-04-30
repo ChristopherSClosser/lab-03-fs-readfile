@@ -22,11 +22,11 @@ describe('fs-read', function(){
         expect(type).to.equal('string');
         done();
       });
-      
+
       it('should be 16\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n', done => {
         let bufferData = read.dataArray[0],
-          // type = typeof bufferData,
           length = bufferData.length;
+
         console.log(`length of string should be 16 - it actually is: '${length}'`);
         expect(length).to.equal(16);
         done();
@@ -45,8 +45,8 @@ describe('fs-read', function(){
 
       it('should be 16\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n', done => {
         let bufferData = read.dataArray[1],
-          // type = typeof bufferData,
           length = bufferData.length;
+
         console.log(`length of string should be 16 - it actually is: '${length}'\n ${bufferData[0, 1, 3]}`);
         expect(length).to.equal(16);
         done();
@@ -65,8 +65,8 @@ describe('fs-read', function(){
 
       it('should be 16\n>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', done => {
         let bufferData = read.dataArray[2],
-          // type = typeof bufferData,
           length = bufferData.length;
+          
         console.log(`length of string should be 16 - it actually is: '${length}'`);
         expect(length).to.equal(16);
         done();

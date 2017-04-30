@@ -31,7 +31,7 @@ exports.start = function(){
 
         console.log('This is data from the third file:\n', exports.dataArray[2]);
         console.log(exports.dataArray);
-        // return exports.dataArray;
+        // return exports.dataArray; RETURNS only undefined to the export
       });
     });
   });
