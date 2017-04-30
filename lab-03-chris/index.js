@@ -1,5 +1,6 @@
 'use strict';
 
-const fsJs = require('./script/lib/fs-read.js');
+const fsJs = require('./script/lib/fs-read');
 
-fsJs();
+fsJs.start();
+// console.log(fsJs.dataArray);
